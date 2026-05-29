@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Swetha ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+height:100vh;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+/* BACKGROUND */
+
+.background{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top left,rgba(0,102,255,0.35),transparent 30%),
+radial-gradient(circle at bottom right,rgba(255,0,80,0.25),transparent 30%),
+linear-gradient(135deg,#050816,#0f172a,#000);
+z-index:-5;
+}
+
+/* PARTICLES */
+
+.particles{
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:-4;
+}
+
+.particle{
+position:absolute;
+width:3px;
+height:3px;
+border-radius:50%;
+background:white;
+opacity:0.35;
+animation:moveParticle linear infinite;
+}
+
+@keyframes moveParticle{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+/* GLASS CARD */
+
+.card{
+
+width:360px;
+min-height:260px;
+
+background:
+rgba(255,255,255,0.08);
+
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,0.1);
+
+border-radius:28px;
+
+padding:35px;
+
+text-align:center;
+
+box-shadow:
+0 0 40px rgba(255,0,80,0.25);
+
+animation:fade 0.8s ease;
+
+position:relative;
+overflow:hidden;
+
+z-index:10;
+
+}
+
+/* TITLES */
+
+.title{
+font-size:2.5rem;
+font-family:'Great Vibes',cursive;
+margin-bottom:20px;
+color:#ff6b8a;
+text-shadow:0 0 15px rgba(255,0,80,0.7);
+}
+
+/* TEXT */
+
+.text{
+font-size:1rem;
+line-height:30px;
+opacity:0.92;
+margin-bottom:25px;
+}
+
+/* BUTTONS */
+
+.btn{
+
+padding:14px 38px;
+border:none;
+border-radius:40px;
+
+background:
+linear-gradient(
+45deg,
+#ff004c,
+#ff4d6d
+);
+
+color:white;
+font-weight:600;
+font-size:0.95rem;
+cursor:pointer;
+
+box-shadow:
+0 0 25px rgba(255,0,80,0.6);
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+/* DOTS */
+
+.dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:18px;
+}
+
+.dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:white;
+opacity:0.3;
+}
+
+.active{
+background:#ff004c;
+opacity:1;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:20px;
+}
+
+.gallery-item{
+overflow:hidden;
+border-radius:14px;
+}
+
+.gallery img{
+width:80%;
+height:200px;
+object-fit:cover;
+border-radius:14px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CURTAIN */
+
+.curtain-container{
+position:fixed;
+inset:0;
+display:none;
+z-index:100;
+pointer-events:none;
+}
+
+.curtain{
+position:absolute;
+top:0;
+width:50%;
+height:100%;
+background:
+repeating-linear-gradient(
+90deg,
+#7a0000,
+#b30000 20px,
+#8a0000 40px
+);
+
+transition:2s ease;
+}
+
+.left{
+left:0;
+border-right:3px solid gold;
+}
+
+.right{
+right:0;
+border-left:3px solid gold;
+}
+
+.open-left{
+transform:translateX(-100%);
+}
+
+.open-right{
+transform:translateX(100%);
+}
+
+/* BALLOONS */
+
+.balloon{
+position:fixed;
+bottom:-150px;
+width:45px;
+height:60px;
+border-radius:50%;
+animation:floatUp linear forwards;
+z-index:1;
+}
+
+.balloon::after{
+content:'';
+position:absolute;
+width:2px;
+height:60px;
+background:white;
+left:50%;
+top:60px;
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-140vh);
+}
+}
+
+/* FINAL MESSAGE */
+
+.final-message{
+font-size:1rem;
+line-height:34px;
+opacity:1;
+color:white;
+margin-top:15px;
+}
+
+/* PHOTO UPLOAD */
+
+.upload{
+margin-top:15px;
+}
+
+input[type=file]{
+display:none;
+}
+
+/* FADE */
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(0.9);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.card{
+width:92%;
+padding:25px;
+}
+
+.gallery img{
+height:90px;
+}
+
+.title{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="particles" id="particles"></div>
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+  <source src="Remo Happy Birthday Bgm.mp3" type="audio/mp3">
+</audio>
+
+<!-- CURTAINS -->
+
+<div class="curtain-container" id="curtainContainer">
+
+<div class="curtain left" id="leftCurtain"></div>
+
+<div class="curtain right" id="rightCurtain"></div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="card" id="card">
+
+<h1 class="title">
+Ready for your surprise?
+</h1>
+
+<button class="btn" onclick="scene2()">
+LET'S GO
+</button>
+
+<div class="dots">
+
+<div class="dot active"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<script>
+
+const card=document.getElementById("card");
+
+/* PARTICLES */
+
+for(let i=0;i<80;i++){
+
+const p=document.createElement("div");
+
+p.classList.add("particle");
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=
+(Math.random()*10+10)+"s";
+
+p.style.animationDelay=
+(Math.random()*5)+"s";
+
+document.getElementById("particles")
+.appendChild(p);
+
+}
+
+/* SCENE 2 */
+
+function scene2(){
+
+card.innerHTML=`
+
+<h1 class="title">
+Music makes it magical 🎵
+</h1>
+
+<button class="btn" onclick="playMusic()">
+PLAY MUSIC
+</button>
+
+<div class="dots">
+
+<div class="dot"></div>
+<div class="dot active"></div>
+<div class="dot"></div>
+
+</div>
+
+`;
+
+}
+
+/* MUSIC */
+
+async function playMusic(){
+
+const music=document.getElementById("music");
+
+try{
+
+await music.play();
+
+}catch(err){
+
+console.log("Music blocked");
+
+}
+
+scene3();
+
+}
+
+/* SCENE 3 */
+
+function scene3(){
+
+card.innerHTML=`
+
+<h1 class="title">
+It's Your Special Day ❤️
+</h1>
+
+<p class="text">
+A magical journey is waiting for you ✨
+</p>
+
+<button class="btn" onclick="scene4()">
+NEXT
+</button>
+
+<div class="dots">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active"></div>
+
+</div>
+
+`;
+
+}
+
+/* SCENE 4 */
+
+function scene4(){
+
+card.style.width="760px";
+
+card.innerHTML=`
+
+<h1 class="title">
+Beautiful Memories 📸
+</h1>
+
+<div class="gallery" id="gallery">
+
+<div class="gallery-item">
+<img src="pic1.jpeg" height="50px">
+</div>
+
+<div class="gallery-item">
+<img src="pic4.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="pic5.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="PIC6.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="pic2.jpeg">
+</div>
+
+<div class="gallery-item">
+<img src="pic3.jpeg">
+</div>
+
+</div>
+
+<div class="upload">
+
+<label class="btn">
+Upload Photos
+<input type="file" multiple accept="image/*" onchange="uploadPhotos(event)">
+</label>
+
+</div>
+
+<br><br>
+
+<button class="btn" onclick="scene5()">
+NEXT
+</button>
+
+`;
+
+}
+
+/* PHOTO UPLOAD */
+
+function uploadPhotos(event){
+
+const files=event.target.files;
+
+const gallery=document.getElementById("gallery");
+
+gallery.innerHTML="";
+
+for(let i=0;i<files.length && i<6;i++){
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+const div=document.createElement("div");
+
+div.classList.add("gallery-item");
+
+div.innerHTML=`
+<img src="${e.target.result}">
+`;
+
+gallery.appendChild(div);
+
+}
+
+reader.readAsDataURL(files[i]);
+
+}
+
+}
+
+/* SCENE 5 */
+
+function scene5(){
+
+card.style.width="420px";
+
+card.innerHTML=`
+
+<h1 class="title">
+My Dear Bestfriend ❤️
+</h1>
+
+<p class="text">
+
+Today is not just another day...<br><br>
+
+It's the celebration of your beautiful soul ✨<br><br>
+
+May your smile always shine brighter than stars 💖
+
+</p>
+
+<button class="btn" onclick="openCurtain()">
+OPEN SURPRISE
+</button>
+
+`;
+
+}
+
+/* CURTAIN */
+
+function openCurtain(){
+
+const curtain=
+document.getElementById("curtainContainer");
+
+curtain.style.display="block";
+
+setTimeout(()=>{
+
+document.getElementById("leftCurtain")
+.classList.add("open-left");
+
+document.getElementById("rightCurtain")
+.classList.add("open-right");
+
+},100);
+
+createBalloons();
+
+setTimeout(()=>{
+
+scene6();
+
+setTimeout(()=>{
+
+curtain.style.display="none";
+
+},1000);
+
+},2200);
+
+}
+
+/* BALLOONS */
+
+function createBalloons(){
+
+const colors=[
+"#ff4d6d",
+"#ffd166",
+"#6ec6ff",
+"#ff99ff",
+"#ffffff"
+];
+
+for(let i=0;i<25;i++){
+
+const b=document.createElement("div");
+
+b.classList.add("balloon");
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.background=
+colors[Math.floor(Math.random()*colors.length)];
+
+b.style.animationDuration=
+(Math.random()*5+6)+"s";
+
+document.body.appendChild(b);
+
+setTimeout(()=>{
+b.remove();
+},12000);
+
+}
+
+}
+
+/* SCENE 6 */
+
+function scene6(){
+
+card.style.width="430px";
+
+card.innerHTML=`
+
+<div style="animation:fade 1s ease;">
+
+<h1 class="title">
+Almost There ✨
+</h1>
+
+<br>
+
+<button id="finalBtn" class="btn">
+SHOW FINAL MESSAGE
+</button>
+
+</div>
+
+`;
+
+document
+.getElementById("finalBtn")
+.addEventListener("click",finalMessage);
+
+}
+
+/* FINAL MESSAGE */
+
+function finalMessage(){
+
+card.style.width="520px";
+
+card.innerHTML=`
+
+<div style="animation:fade 1s ease;">
+
+<h1 class="title">
+🎂 Happiest B'day  Mowa ❤️
+</h1>
+
+<p class="final-message">
+
+May happiness always stay with you on ur spl day i just want you to know how much you mean to me. ✨
+<br><br>
+
+You bring light,laughter,and so much love wherever you go.May ur day be filled with all the happiness you deserve,and may this yr brings you endless success,peace and joy 💖
+<br><br>
+
+Always stay the amazing person you are the world is better with you in it.🌸
+<br><br>
+
+Love you always ❤️
+
+</p>
+
+<br>
+
+<button class="btn" onclick="location.reload()">
+RESTART
+</button>
+
+</div>
+
+`;
+
+createConfetti();
+
+}
+
+/* CONFETTI */
+
+function createConfetti(){
+
+for(let i=0;i<180;i++){
+
+const conf=document.createElement("div");
+
+conf.style.position="fixed";
+
+conf.style.width="10px";
+conf.style.height="10px";
+
+conf.style.left=Math.random()*100+"vw";
+
+conf.style.top="-10px";
+
+conf.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+conf.style.zIndex="999";
+
+conf.style.borderRadius="50%";
+
+document.body.appendChild(conf);
+
+const duration=Math.random()*3+3;
+
+conf.animate([
+
+{
+transform:"translateY(0) rotate(0deg)",
+opacity:1
+},
+
+{
+transform:
+`translateY(${window.innerHeight+100}px)
+translateX(${Math.random()*300-150}px)
+rotate(720deg)`,
+opacity:0
+}
+
+],{
+
+duration:duration*1000,
+easing:"linear"
+
+});
+
+setTimeout(()=>{
+conf.remove();
+},duration*1000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
